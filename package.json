@@ -16,25 +16,36 @@
     "validation"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest test.js",
     "build": "microbundle index.js -f es,cjs --target node --output dist --sourcemap false"
   },
   "author": "Eric Schaefer <omg@eric-schaefer.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-flow": "^7.0.0",
+    "apollo-server-express": "^2.8.1",
+    "babel-jest": "^24.8.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
     "flow-bin": "^0.104.0",
+    "flow-remove-types": "^2.104.0",
     "graphql": "^14.4.2",
     "husky": "^3.0.2",
+    "jest": "^24.8.0",
     "lint-staged": "^9.2.1",
     "microbundle": "^0.11.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "supertest": "^4.0.2"
   },
   "peerDependencies": {
     "graphql": "*"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test"
     }
   },
   "lint-staged": {
@@ -43,5 +54,8 @@
       "prettier --parser flow --write",
       "git add"
     ]
+  },
+  "transform": {
+    "^.+\\.js?$": "babel-jest"
   }
 }
