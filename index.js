@@ -17,6 +17,11 @@ const checkWhitelist = (whitelist: Whitelist, node: FieldNode) =>
       )
   );
 
+/**
+ *  @param {String[]} whitelist, query names to be whitelisted
+ *  @param {Boolean} isEnabled, You can change this to false based on your own environment variables
+ *  @returns {Function}
+ */
 const IntrospectionWhiteList = (
   whitelist: Whitelist,
   isEnabled: boolean = true

@@ -17,6 +17,7 @@
   ],
   "scripts": {
     "test": "jest test.js",
+    "docs": "documentation readme index.js --section=API",
     "build": "microbundle index.js -f es,cjs --target node --output dist --sourcemap false"
   },
   "author": "Eric Schaefer <omg@eric-schaefer.com>",
@@ -28,6 +29,7 @@
     "apollo-server-express": "^2.8.1",
     "babel-jest": "^24.8.0",
     "body-parser": "^1.19.0",
+    "documentation": "^12.1.1",
     "express": "^4.17.1",
     "flow-bin": "^0.104.0",
     "flow-remove-types": "^2.104.0",
