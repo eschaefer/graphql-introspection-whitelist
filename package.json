@@ -1,6 +1,6 @@
 {
   "name": "graphql-introspection-whitelist",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Simple white listing for GraphQL introspection queries, based on types.",
   "source": "index.js",
   "main": "dist/index.js",
