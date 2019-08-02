@@ -1,16 +1,48 @@
-```diff
+# graphql-introspection-whitelist
+
+Lets you pass an array of whitelisted introspection `__type` queries to your GraphQL server.
+
+You might find this useful if you wish to guard your full schema, but still want to expose specific enums or other types as a query response on your production application.
+
+All `__schema` and `__type` queries are disabled by default if you do not pass anything into the validation function.
+
+## Usage
+
+```
+npm install graphql-introspection-whitelist
+```
+
+Typically `__type` queries are disallowed on a production GraphQL server, to prevent an attacker from mapping-out your full schema, type by type:
+
+```graphql
+{
+  __type(name: "Status") {
+    name
+    enumValues {
+      name
+    }
+  }
+}
+```
+
+Enter our query whitelist. This will let you name specific `__type` queries to be exposed in your production application, while still blocking the others from prying eyes.
+
+## Setup
+
+```javascript
 import introspectionWhitelist from 'graphql-introspection-whitelist';
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context,
-+ introspection: true, // override default Apollo setting here, and rely on whitelist instead
-+ validationRules: [
-+   introspectionWhiteList(['SomeQueryName'])
-+ ]
+
+  // override default setting here, and rely on whitelist instead
+  introspection: true,
+  validationRules: [introspectionWhiteList(['Status'])]
 });
 ```
+
+#### introspectionWhitelist(whitelist: Array<string>, isEnabled?: boolean) ⇒ <code>function</code>
 
 ## API
 
