@@ -16,7 +16,7 @@ Typically `__type` queries are disallowed on a production GraphQL server, to pre
 
 Let's say you have an enum in your schema:
 
-```
+```graphql
 enum Status {
   SLEEPING
   WORKING
