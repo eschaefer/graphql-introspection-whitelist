@@ -12,7 +12,19 @@ All `__schema` and `__type` queries are disabled by default if you do not pass a
 npm install graphql-introspection-whitelist
 ```
 
-Typically `__type` queries are disallowed on a production GraphQL server, to prevent an attacker from mapping-out your full schema, type by type:
+Typically `__type` queries are disallowed on a production GraphQL server, to prevent an attacker from mapping-out your full schema, type by type.
+
+Let's say you have an enum in your schema:
+
+```
+enum Status {
+  SLEEPING
+  WORKING
+  EATING
+}
+```
+
+Perhaps you need to query this type directly, to get a list of all `Status`es:
 
 ```graphql
 {
