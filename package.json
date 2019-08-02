@@ -1,0 +1,32 @@
+{
+	"name": "graphql-introspection-whitelist",
+	"version": "1.0.0",
+	"description": "",
+	"source": "index.js",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"keywords": [
+		"graphql",
+		"apollo",
+		"query",
+		"introspection",
+		"whitelist",
+		"white",
+		"list",
+		"validation"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "microbundle index.js -f es,cjs --target node --output dist --sourcemap false"
+	},
+	"author": "Eric Schaefer <omg@eric-schaefer.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"flow-bin": "^0.104.0",
+		"graphql": "^14.4.2",
+		"microbundle": "^0.11.0"
+	},
+	"peerDependencies": {
+		"graphql": "*"
+	}
+}
