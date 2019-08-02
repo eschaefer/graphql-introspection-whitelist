@@ -27,7 +27,7 @@
     "test": "jest test.js",
     "docs": "documentation readme index.js --section=API",
     "build": "microbundle index.js -f es,cjs --target node --output dist --sourcemap false",
-    "release": "np"
+    "release": "npm run build && np"
   },
   "author": "Eric Schaefer <omg@eric-schaefer.com>",
   "license": "MIT",
