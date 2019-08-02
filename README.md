@@ -29,3 +29,7 @@ const server = new ApolloServer({
 - `isEnabled` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** , You can change this to false based on your own environment variables (optional, default `true`)
 
 Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)**
+
+## Thanks
+
+https://github.com/helfer/graphql-disable-introspection @helfer for a basis on which to work from.
