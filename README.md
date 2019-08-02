@@ -54,7 +54,7 @@ const server = new ApolloServer({
 });
 ```
 
-#### introspectionWhitelist(whitelist: Array<string>, isEnabled?: boolean) ⇒ <code>function</code>
+#### introspectionWhitelist(whitelist: `Array<string>`, isEnabled?: `boolean`) ⇒ <code>function</code>
 
 ## API
 
