@@ -1,32 +1,47 @@
 {
-	"name": "graphql-introspection-whitelist",
-	"version": "1.0.0",
-	"description": "",
-	"source": "index.js",
-	"main": "dist/index.js",
-	"module": "dist/index.mjs",
-	"keywords": [
-		"graphql",
-		"apollo",
-		"query",
-		"introspection",
-		"whitelist",
-		"white",
-		"list",
-		"validation"
-	],
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "microbundle index.js -f es,cjs --target node --output dist --sourcemap false"
-	},
-	"author": "Eric Schaefer <omg@eric-schaefer.com>",
-	"license": "MIT",
-	"devDependencies": {
-		"flow-bin": "^0.104.0",
-		"graphql": "^14.4.2",
-		"microbundle": "^0.11.0"
-	},
-	"peerDependencies": {
-		"graphql": "*"
-	}
+  "name": "graphql-introspection-whitelist",
+  "version": "1.0.0",
+  "description": "Simple white listing for GraphQL introspection queries, based on types.",
+  "source": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "keywords": [
+    "graphql",
+    "apollo",
+    "query",
+    "introspection",
+    "whitelist",
+    "white",
+    "list",
+    "validation"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "microbundle index.js -f es,cjs --target node --output dist --sourcemap false"
+  },
+  "author": "Eric Schaefer <omg@eric-schaefer.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "flow-bin": "^0.104.0",
+    "graphql": "^14.4.2",
+    "husky": "^3.0.2",
+    "lint-staged": "^9.2.1",
+    "microbundle": "^0.11.0",
+    "prettier": "^1.18.2"
+  },
+  "peerDependencies": {
+    "graphql": "*"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "flow focus-check",
+      "prettier --parser flow --write",
+      "git add"
+    ]
+  }
 }
