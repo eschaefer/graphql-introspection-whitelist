@@ -68,9 +68,5 @@
   },
   "transform": {
     "^.+\\.js?$": "babel-jest"
-  },
-  "np": {
-    "yarn": false,
-    "contents": "dist"
   }
 }
