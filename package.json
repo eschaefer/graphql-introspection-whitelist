@@ -5,6 +5,14 @@
   "source": "index.js",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eschaefer/graphql-introspection-whitelist.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eschaefer/graphql-introspection-whitelist/issues"
+  },
+  "homepage": "https://github.com/eschaefer/graphql-introspection-whitelist",
   "keywords": [
     "graphql",
     "apollo",
@@ -18,7 +26,8 @@
   "scripts": {
     "test": "jest test.js",
     "docs": "documentation readme index.js --section=API",
-    "build": "microbundle index.js -f es,cjs --target node --output dist --sourcemap false"
+    "build": "microbundle index.js -f es,cjs --target node --output dist --sourcemap false",
+    "release": "np"
   },
   "author": "Eric Schaefer <omg@eric-schaefer.com>",
   "license": "MIT",
@@ -37,6 +46,7 @@
     "jest": "^24.8.0",
     "lint-staged": "^9.2.1",
     "microbundle": "^0.11.0",
+    "np": "^5.0.3",
     "prettier": "^1.18.2",
     "supertest": "^4.0.2"
   },
@@ -58,5 +68,9 @@
   },
   "transform": {
     "^.+\\.js?$": "babel-jest"
+  },
+  "np": {
+    "yarn": false,
+    "contents": "dist"
   }
 }
