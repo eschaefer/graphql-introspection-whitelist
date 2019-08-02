@@ -1,4 +1,6 @@
 ```diff
+import introspectionWhitelist from 'graphql-introspection-whitelist';
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
