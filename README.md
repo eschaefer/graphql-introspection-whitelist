@@ -8,9 +8,7 @@ All `__schema` and `__type` queries are disabled by default if you do not pass a
 
 ## Usage
 
-```
-npm install graphql-introspection-whitelist
-```
+    npm install graphql-introspection-whitelist
 
 Typically `__type` queries are disallowed on a production GraphQL server, to prevent an attacker from mapping-out your full schema, type by type.
 
@@ -62,18 +60,17 @@ const server = new ApolloServer({
 
 #### Table of Contents
 
-- [IntrospectionWhiteList](#introspectionwhitelist)
-  - [Parameters](#parameters)
+-   [IntrospectionWhiteList](#introspectionwhitelist)
+    -   [Parameters](#parameters)
 
 ### IntrospectionWhiteList
 
 #### Parameters
 
-- `whitelist` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>** , query names to be whitelisted
-- `isEnabled` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** , You can change this to false based on your own environment variables (optional, default `true`)
+-   `whitelist` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>** , query names to be whitelisted
 
-Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)**
+Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** 
 
 ## Thanks
 
-https://github.com/helfer/graphql-disable-introspection @helfer for a basis on which to work from.
+<https://github.com/helfer/graphql-disable-introspection> @helfer for a basis on which to work from.
