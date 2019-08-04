@@ -52,7 +52,7 @@ const server = new ApolloServer({
 });
 ```
 
-#### introspectionWhitelist(whitelist: `Array<string>`, isEnabled?: `boolean`) ⇒ <code>function</code>
+#### introspectionWhitelist(whitelist: `Array<string>`) ⇒ <code>function</code>
 
 ## API
 
@@ -60,16 +60,16 @@ const server = new ApolloServer({
 
 #### Table of Contents
 
--   [IntrospectionWhiteList](#introspectionwhitelist)
-    -   [Parameters](#parameters)
+- [IntrospectionWhiteList](#introspectionwhitelist)
+  - [Parameters](#parameters)
 
 ### IntrospectionWhiteList
 
 #### Parameters
 
--   `whitelist` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>** , query names to be whitelisted
+- `whitelist` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>** , query names to be whitelisted
 
-Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** 
+Returns **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)**
 
 ## Thanks
 
