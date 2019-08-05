@@ -1,6 +1,8 @@
 # graphql-introspection-whitelist
 
-Lets you pass an array of whitelisted introspection `__type` queries to your GraphQL server.
+A `validationRules` array is [part of the ExpressGraphQL API](https://github.com/graphql/graphql-js/blob/31f74475b64145455634fcb5f5f0c6cbfc5114a3/docs/APIReference-ExpressGraphQL.md), and can accept pretty much any validation function you can think of.
+
+The `graphql-introspection-whitelist` package lets you pass an array of whitelisted introspection `__type` queries to your GraphQL server.
 
 You might find this useful if you wish to guard your full schema, but still want to expose specific enums or other types as a query response on your production application.
 
